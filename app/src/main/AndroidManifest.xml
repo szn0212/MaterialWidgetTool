@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tools.study.com.materialwidgettool">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".WidgetToolApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".drawerlayout.HomeActivity"
+            android:theme="@style/DrawerLayoutTheme"/>
+
+        <activity android:name=".swipeback.FirstActivity"
+            android:theme="@style/SwipeBackTheme"/>
+
+        <activity android:name=".swipeback.SecondActivity"
+            android:theme="@style/SwipeBackTheme"/>
+
+        <activity android:name=".swipeback.SettingActivity"
+            android:theme="@style/SwipeBackTheme"/>
+        <activity android:name=".swipeback.DragLayoutActivity"/>
+
+        <activity android:name=".recycleview.RecyclerActivity"/>
+        <activity android:name=".recycleview.VerticalRecyclerViewActivity"/>
+
+        <activity android:name=".materialanimation.MaterialAnimationsActivity"
+            android:theme="@style/MaterialAnimations"/>
+        <activity android:name=".materialanimation.TransitionActivity1"
+            android:theme="@style/MaterialAnimations"/>
+        <activity android:name=".materialanimation.TransitionActivity2"
+            android:theme="@style/MaterialAnimations"/>
+        <activity android:name=".materialanimation.TransitionActivity3"
+            android:theme="@style/MaterialAnimations"/>
+        <activity android:name=".materialanimation.SharedElementActivity"
+            android:theme="@style/MaterialAnimations"/>
+        <activity android:name=".materialanimation.AnimationsActivity1"
+            android:theme="@style/MaterialAnimations"/>
+        <activity android:name=".materialanimation.AnimationsActivity2"
+            android:theme="@style/MaterialAnimations"/>
+        <activity android:name=".materialanimation.RevealActivity"
+            android:theme="@style/MaterialAnimations"/>
+
+
+        <activity android:name=".surfaceview.SurfaceViewActivity"/>
+        <activity android:name=".surfaceview.AnimBubbleActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".surfaceview.CustomCanvasActivity"/>
+
+
+        <activity android:name=".coordinatorlayout.CoordinatorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".coordinatorlayout.CoordinatorListActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".coordinatorlayout.HomeActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+    </application>
+
+</manifest>

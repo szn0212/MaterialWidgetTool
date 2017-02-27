@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="navigation_checked_news_text_color">#FF4E3E80</color>
+    <color name="navigation_checked_picture_text_color">#FFBA4A49</color>
+    <color name="navigation_checked_video_text_color">#FFF16022</color>
+    <color name="navigation_checked_music_text_color">#FF14BF81</color>
+
+    <color name="base_bg">#ffeeeeee</color>
+    <color name="base_msg_color">#ff999999</color>
+
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+    <color name="cpb_default_color">#33b5e5</color>
+
+    <color name="material_animations_primary">#039BE5</color>
+    <color name="material_animations_primary_dark">#0277BD</color>
+    <color name="material_animations_blank">#424242</color>
+    <color name="material_animations_accent">#3F51B5</color>
+    <color name="theme_blue_background">#84ffff</color>
+    <color name="theme_red_background">#ff8a80</color>
+    <color name="theme_yellow_background">#ffff8d</color>
+    <color name="theme_green_background">#b9f6ca</color>
+    <color name="text_light">@android:color/white</color>
+    <color name="text_dark">#616161</color>
+    <color name="light_grey">#E0E0E0</color>
+    <color name="sample_red">#ff4444</color>
+    <color name="sample_blue">#33b5e5</color>
+    <color name="sample_green">#669900</color>
+    <color name="sample_yellow">#ff8800</color>
+
+</resources>

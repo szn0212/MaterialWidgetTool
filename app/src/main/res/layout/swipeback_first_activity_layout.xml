@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/swipeback_to_setting_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="设置页面"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+    <Button
+        android:id="@+id/swipeback_to_second_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="第二个页面"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+    <Button
+        android:id="@+id/swipeback_to_draglayout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="DragLayout"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
+
+</LinearLayout>

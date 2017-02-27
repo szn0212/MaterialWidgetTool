@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="navigation_list">
+        <item>新闻资讯</item>
+        <item>图片浏览</item>
+        <item>视频爽看</item>
+        <item>音乐轻听</item>
+    </string-array>
+
+    <array name="news_category_list_ids">
+        <item>头条</item>
+        <item>汽车</item>
+        <item>房产</item>
+        <item>科技</item>
+        <item>星座</item>
+        <item>旅游</item>
+        <item>时尚</item>
+        <item>娱乐</item>
+    </array>
+
+    <string-array name="sex_name">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+
+    <string-array name="sex_value">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+
+    <string-array name="recycleview_type">
+        <item>Vertical RecyclerView</item>
+        <item>Horizontal RecyclerView</item>
+        <item>Grid RecyclerView</item>
+        <item>StaggeredGrid RecyclerView</item>
+        <item>Expansable RecycleView</item>
+    </string-array>
+
+    <string-array name="surfaceview_type">
+        <item>会呼吸的气泡</item>
+        <item>我的画板</item>
+    </string-array>
+
+</resources>
