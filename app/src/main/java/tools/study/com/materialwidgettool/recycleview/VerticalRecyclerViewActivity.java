@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.study.library.utils.ScreenUtils;
 
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class VerticalRecyclerViewActivity extends AppCompatActivity{
     private int page = 1;
     private int TOTAL_COUNT = 200;
     private List<String> datas;
+    private List<MySection> sectionDatas = new ArrayList<>();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -82,32 +84,57 @@ public class VerticalRecyclerViewActivity extends AppCompatActivity{
                 adapter = new WidgetListAdapter(true, R.layout.widget_list_item_staggeredgrid_layout);
                 break;
             case EXPANSABLE:
+                recyclerView.setLayoutManager(new LinearLayoutManager(getBaseContext()));
+
+                for (int i = 1; i <= TOTAL_COUNT; i++) {
+                    MySection sectionData = null;
+                    if(i%10 == 0) {
+                        sectionData = new MySection(true, "Item " + i);
+                    }else {
+                        sectionData = new MySection("Item " + i);
+                    }
+                    sectionDatas.add(sectionData);
+                }
+
+                final SectionListAdapter sectionAdapter = new SectionListAdapter(R.layout.widget_list_item_layout,
+                        R.layout.widget_list_item_header_layout, sectionDatas);
+                recyclerView.setAdapter(sectionAdapter);
+
+                recyclerView.addOnItemTouchListener(new OnItemClickListener() {
+                    @Override
+                    public void SimpleOnItemClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
+                        MySection mySection = sectionDatas.get(i);
+                        if(mySection.isHeader){
+//                            if(recyclerView.getLayoutParams().)
+                        }
+                    }
+                });
+
                 break;
         }
 
-
-        recyclerView.setAdapter(adapter);
-
-        adapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_RIGHT);
-        adapter.isFirstOnly(false);//true表示每个item只执行一次， false表示可以重复执行动画
-        adapter.setEnableLoadMore(true);
+        if(adapter != null) {
+            recyclerView.setAdapter(adapter);
+            adapter.openLoadAnimation(BaseQuickAdapter.SLIDEIN_RIGHT);
+            adapter.isFirstOnly(false);//true表示每个item只执行一次， false表示可以重复执行动画
+            adapter.setEnableLoadMore(true);
 //        adapter.setAutoLoadMoreSize(1);//默认是1
 
-        swiperefresh_layout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                getData(true);
-            }
-        });
+            swiperefresh_layout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    getData(true);
+                }
+            });
 
-        adapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
-            @Override
-            public void onLoadMoreRequested() {
-                getData(false);
-            }
-        });
+            adapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
+                @Override
+                public void onLoadMoreRequested() {
+                    getData(false);
+                }
+            });
 
-        adapter.setLoadMoreView(new CustomLoadMoreView());
+            adapter.setLoadMoreView(new CustomLoadMoreView());
 
 //        View view = LayoutInflater.from(getBaseContext()).inflate(R.layout.recycleview_header_view, null);
 //
@@ -118,7 +145,10 @@ public class VerticalRecyclerViewActivity extends AppCompatActivity{
 //        }
 //        adapter.addFooterView(view);
 
-        getData(true);
+            getData(true);
+        }
+
+
     }
 
     private void getData(final boolean isRefresh) {

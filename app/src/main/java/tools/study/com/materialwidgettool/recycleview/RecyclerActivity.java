@@ -22,6 +22,7 @@ import tools.study.com.materialwidgettool.WidgetListAdapter;
  * @author suzhuning
  * @date 2016/11/18.
  * Description:
+ *  其他用法参考https://github.com/CymChad/BaseRecyclerViewAdapterHelper
  */
 public class RecyclerActivity extends AppCompatActivity {
 
@@ -66,6 +67,7 @@ public class RecyclerActivity extends AppCompatActivity {
                         break;
 
                     case "Expansable RecycleView":
+                        intent.putExtra("enumType", VerticalRecyclerViewActivity.RecycleType.EXPANSABLE);
                         break;
 
                 }
